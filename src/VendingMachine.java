@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class VendingMachine {
     Vender vender = new Vender();
     Scanner sc = new Scanner(System.in);
     int inputMoney = 0;
@@ -64,7 +64,7 @@ public class Main {
 
         }
     public static void main(String[] args) {
-        Main main = new Main();
+        VendingMachine main = new VendingMachine();
         main.process();
 
 
