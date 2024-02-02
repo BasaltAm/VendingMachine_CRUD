@@ -29,11 +29,15 @@ public class Vender {
     }
 
     public void giveBack(int change){
-        System.out.println("잔돈: "+change);
+        System.out.println("잔돈: "+change+"이 나옵니다.");
     }
 
     public void selectMenu(){
         System.out.println("메뉴를 선택해주세요.");
+    }
+
+    public void wrong(){
+        System.out.println("1000이하로 돈을 넣어주십쇼!");
     }
 
 }
