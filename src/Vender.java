@@ -3,12 +3,17 @@ public class Vender {
     private int price;
     private int change;
 
+    public Vender() {
+        this.price = price;
+    }
+
     public int getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public int setPrice(int price) {
         this.price = price;
+        return price;
     }
 
     public int getChange() {

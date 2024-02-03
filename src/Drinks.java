@@ -28,14 +28,13 @@ public class Drinks extends Vender{
         this.ml = ml;
     }
 
-    public void setAll(String name, int ml, String type, int price){
-        this.name = name;
-        this.ml = ml;
-        this.type = type;
-        this.setPrice(price);
-    }
 
     public void outPut(String name){
         System.out.println("음료 "+name+"가 나왔습니다");
+    }
+
+    public void stock(String name, int price){
+        this.name = name;
+        this.setPrice(price);
     }
 }
