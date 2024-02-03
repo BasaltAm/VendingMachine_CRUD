@@ -6,7 +6,6 @@ import java.awt.event.ActionEvent;
 public class VendingFrame extends JFrame {
     JTextField textField;
     String left = "";
-    int result = 0;
     JTextArea textArea = new JTextArea();
     Drinks drinks = new Drinks();
     int in = 0;
@@ -31,13 +30,6 @@ public class VendingFrame extends JFrame {
         lblNewLabel.setIcon(new ImageIcon("/Users/patricksmacbookair/Desktop/kr_fanta_prod_fanta orange 355ml_750x750 복사본.jpg"));
         panel.add(lblNewLabel);
 
-        JLabel lblNewLabel_1 = new JLabel("");
-        lblNewLabel_1.setBounds(169, 33, 100, 100);
-        panel.add(lblNewLabel_1);
-
-        JLabel lblNewLabel_1_1 = new JLabel("");
-        lblNewLabel_1_1.setBounds(328, 33, 100, 100);
-        panel.add(lblNewLabel_1_1);
 
         JLabel lblNewLabel_2 = new JLabel("");
         lblNewLabel_2.setIcon(new ImageIcon("/Users/patricksmacbookair/Desktop/7341678819_l.png"));
@@ -64,34 +56,64 @@ public class VendingFrame extends JFrame {
         lblNewLabel_5_1.setBounds(317, 226, 100, 100);
         panel.add(lblNewLabel_5_1);
 
-        JLabel lblNewLabel_6 = new JLabel("콜라");
-        lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
-        lblNewLabel_6.setBounds(45, 144, 61, 16);
-        panel.add(lblNewLabel_6);
+        JLabel lblNewLabel_6_1 = new JLabel("콜라");
+        lblNewLabel_6_1.setHorizontalAlignment(SwingConstants.CENTER);
+        lblNewLabel_6_1.setBounds(45, 118, 61, 16);
+        panel.add(lblNewLabel_6_1);
 
-        JLabel lblNewLabel_7 = new JLabel("환타");
-        lblNewLabel_7.setHorizontalAlignment(SwingConstants.CENTER);
-        lblNewLabel_7.setBounds(189, 145, 61, 16);
-        panel.add(lblNewLabel_7);
+        JLabel lblNewLabel_7_2 = new JLabel("환타");
+        lblNewLabel_7_2.setHorizontalAlignment(SwingConstants.CENTER);
+        lblNewLabel_7_2.setBounds(189, 118, 61, 16);
+        panel.add(lblNewLabel_7_2);
 
-        JLabel lblNewLabel_7_1 = new JLabel("미란다");
-        lblNewLabel_7_1.setHorizontalAlignment(SwingConstants.CENTER);
-        lblNewLabel_7_1.setBounds(338, 145, 61, 16);
-        panel.add(lblNewLabel_7_1);
+        JLabel lblNewLabel_7_1_2 = new JLabel("미란다");
+        lblNewLabel_7_1_2.setHorizontalAlignment(SwingConstants.CENTER);
+        lblNewLabel_7_1_2.setBounds(338, 118, 61, 16);
+        panel.add(lblNewLabel_7_1_2);
+
+        JLabel twoPrice = new JLabel("600");
+        twoPrice.setHorizontalAlignment(SwingConstants.CENTER);
+        twoPrice.setBounds(189, 339, 61, 16);
+        panel.add(twoPrice);
+
+        JLabel gasPrice = new JLabel("500");
+        gasPrice.setHorizontalAlignment(SwingConstants.CENTER);
+        gasPrice.setBounds(327, 340, 61, 16);
+        panel.add(gasPrice);
+
+        JLabel oroPrice = new JLabel("500");
+        oroPrice.setHorizontalAlignment(SwingConstants.CENTER);
+        oroPrice.setBounds(45, 339, 61, 16);
+        panel.add(oroPrice);
+
+        JLabel cokePrice = new JLabel("900");
+        cokePrice.setHorizontalAlignment(SwingConstants.CENTER);
+        cokePrice.setBounds(45, 144, 61, 16);
+        panel.add(cokePrice);
+
+        JLabel fantaPrice = new JLabel("800");
+        fantaPrice.setHorizontalAlignment(SwingConstants.CENTER);
+        fantaPrice.setBounds(189, 145, 61, 16);
+        panel.add(fantaPrice);
+
+        JLabel miranPrice = new JLabel("700");
+        miranPrice.setHorizontalAlignment(SwingConstants.CENTER);
+        miranPrice.setBounds(338, 145, 61, 16);
+        panel.add(miranPrice);
 
         JLabel lblNewLabel_7_1_1 = new JLabel("오로나민C");
         lblNewLabel_7_1_1.setHorizontalAlignment(SwingConstants.CENTER);
-        lblNewLabel_7_1_1.setBounds(45, 338, 61, 16);
+        lblNewLabel_7_1_1.setBounds(45, 312, 61, 16);
         panel.add(lblNewLabel_7_1_1);
 
         JLabel lblNewLabel_7_1_1_1 = new JLabel("2%");
         lblNewLabel_7_1_1_1.setHorizontalAlignment(SwingConstants.CENTER);
-        lblNewLabel_7_1_1_1.setBounds(189, 338, 61, 16);
+        lblNewLabel_7_1_1_1.setBounds(189, 312, 61, 16);
         panel.add(lblNewLabel_7_1_1_1);
 
         JLabel lblNewLabel_7_1_1_1_1 = new JLabel("가스 활명수");
         lblNewLabel_7_1_1_1_1.setHorizontalAlignment(SwingConstants.CENTER);
-        lblNewLabel_7_1_1_1_1.setBounds(327, 338, 61, 16);
+        lblNewLabel_7_1_1_1_1.setBounds(327, 312, 61, 16);
         panel.add(lblNewLabel_7_1_1_1_1);
 
         coke.addActionListener(new ActionListener() {
@@ -104,7 +126,7 @@ public class VendingFrame extends JFrame {
         });
         coke.setBounds(17, 159, 117, 29);
         panel.add(coke);
-        
+
         fanta.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -112,6 +134,7 @@ public class VendingFrame extends JFrame {
                 drinks.setPrice(800);
                 JOptionPane.showMessageDialog(fanta, drinks.getName()+"가 나왔 습니다.");
                 drinksLogic(drinks);
+
             }
         });
         fanta.setBounds(165, 159, 117, 29);
@@ -123,7 +146,8 @@ public class VendingFrame extends JFrame {
             drinks.setName("미란다");
             drinks.setPrice(800);
             JOptionPane.showMessageDialog(miranda, drinks.getName()+"가 나왔 습니다.");
-            drinksLogic(drinks);
+                drinksLogic(drinks);
+
             }
         });
         miranda.setBounds(311, 159, 117, 29);
@@ -135,6 +159,7 @@ public class VendingFrame extends JFrame {
                 drinks.setPrice(700);
                 JOptionPane.showMessageDialog(oronaC, drinks.getName()+"가 나왔 습니다.");
                 drinksLogic(drinks);
+
             }
         });
         oronaC.setBounds(22, 357, 117, 29);
@@ -146,6 +171,7 @@ public class VendingFrame extends JFrame {
                 drinks.setName("이퍼센트");
                 drinks.setPrice(600);
                 JOptionPane.showMessageDialog(twoPer, drinks.getName()+"가 나왔 습니다.");
+                drinksLogic(drinks);
             }
         });
         twoPer.setBounds(165, 357, 117, 29);
@@ -160,8 +186,10 @@ public class VendingFrame extends JFrame {
         inputBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 String input = textArea.getText();
                 in = Integer.parseInt(input);
+                drinksLogic(drinks);
                 textArea.setText(null);
                 if(in>=500){
                     oronaC.setEnabled(true);
@@ -206,26 +234,35 @@ public class VendingFrame extends JFrame {
         textField.setColumns(10);
 
 
+        returnBtn.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                drinksLogic(drinks);
+                JOptionPane.showMessageDialog(returnBtn,  left+ "이 반환 되었습니다.");
+                textField.setText(null);
+                buttonAction();
+
+            }
+        });
         returnBtn.setBounds(311, 548, 117, 29);
         panel.add(returnBtn);
     }
+
 
     private void drinksLogic(Drinks drinks) {
         if (in > drinks.getPrice()) {
             left = String.valueOf(in - drinks.getPrice());
             textField.setText(left);
             returnBtn.setEnabled(true);
-            returnBtn.addActionListener(new ActionListener() {
-                public void actionPerformed(ActionEvent e) {
-                    JOptionPane.showMessageDialog(returnBtn, left + "이 반환 되었습니다.");
-                    textField.setText(null);
-                }
-            });
-        }
-        if (in == drinks.getPrice()) {
+
+        }else if (in == drinks.getPrice()) {
             String zero = "0";
             textField.setText(zero);
             returnBtn.setEnabled(false);
+            buttonAction();
+        }else if(in<500){
+            left = String.valueOf(in);
+            textField.setText(left);
+            returnBtn.setEnabled(true);
         }
     }
     private void buttonAction() {
@@ -236,4 +273,5 @@ public class VendingFrame extends JFrame {
         twoPer.setEnabled(false);
         miranda.setEnabled(false);
     }
+
 }
